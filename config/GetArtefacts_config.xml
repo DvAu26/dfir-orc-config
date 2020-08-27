@@ -2,7 +2,7 @@
 <getthis reportall="">
     <output compression="fast"/>
     <location altitude="highest" shadows="yes">*</location>
-    <samples MaxTotalBytes="1GB" MaxSampleCount="200000" MaxPerSampleBytes="650MB">
+    <samples MaxTotalBytes="1GB" MaxSampleCount="200000" MaxPerSampleBytes="1GB">
         <sample name="Inf" MaxPerSampleBytes="1MB">
           <ntfs_find name_match="*.inf"/>
           <ntfs_exclude path_match="\Windows\*"/>

@@ -9,13 +9,13 @@
 	<!--Without the optional parameter set to yes ... optional="yes" to have a memory dump-->
 	<!--<archive name="ORCMEM_{SystemType}_{FullComputerName}_{TimeStamp}_Memory.7z" keyword="Memory" concurrency="2" repeat="Once" compression="fast" archive_timeout="240" optional="yes">-->
 	<archive name="ORCMEM_{SystemType}_{FullComputerName}_{TimeStamp}_Memory.7z" keyword="Memory" concurrency="2" repeat="Once" compression="fast" archive_timeout="240">
-		<restrictions JobMemoryLimit="3G" ProcessMemoryLimit="3G" ElapsedTimeLimit="240"/>
+		<restrictions JobMemoryLimit="5G" ProcessMemoryLimit="4G" ElapsedTimeLimit="240"/>
 
 		<!--GetMemory command to use "winpmem.exe output -" stream to StdOut -->
 		<command keyword="GetMemory">
 			<execute name="winpmem.exe" run="7z:#Tools|winpmem.exe"/>
-			<argument>--output -</argument>
-			<output name="Memory_{FullComputerName}_{TimeStamp}.aff4" source="StdOut"/>
+			<argument>--format raw --output -</argument>
+			<output name="Memory_{FullComputerName}_{TimeStamp}.raw" source="StdOut"/>
 			<output name="Winpmem.log" source="StdErr"/>
 		</command>
 
@@ -28,7 +28,7 @@
 	</archive>
 	<!--ORCSYS config-->
     <archive name="ORCSYS_{SystemType}_{FullComputerName}_{TimeStamp}_Main.7z" keyword="Main" concurrency="2" repeat="Once" compression="fast">
-        <restrictions JobMemoryLimit="3G" ProcessMemoryLimit="2G" ElapsedTimeLimit="360"/>
+        <restrictions JobMemoryLimit="5G" ProcessMemoryLimit="4G" ElapsedTimeLimit="360"/>
 
 		<!--If the optional argument is set to "yes" then
 		    by default will not be executed.
@@ -86,7 +86,7 @@
         </command>
 
 		<!--Optional parameter set "yes", not execute by default-->
-        <command keyword="NTFSInfoHashPE" queue="flush" optional="yes">
+        <command keyword="NTFSInfoHashPE" queue="flush">
             <execute name="DFIR-ORC.exe" run="self:#NTFSInfo"/>
             <argument>/config=res:#NTFSInfoHashPE_config.xml</argument>
             <output name="NTFSInfoHashPE_SecDesc.7z" source="File" argument="/SecDescr={FileName}"/>

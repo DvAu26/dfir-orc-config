@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <getthis reportall="">
     <location shadows="yes">*</location>
-    <samples MaxPerSampleBytes="4GB" MaxTotalBytes="16GB">
+    <samples MaxPerSampleBytes="8GB" MaxTotalBytes="16GB">
         <sample>
             <ntfs_find name="pagefile.sys"/>
 			      <ntfs_find name="swapfile.sys"/>

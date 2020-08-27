@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <getthis reportall="">
     <location altitude="highest">%SystemDrive%</location>
-    <samples MaxPerSampleBytes="3GB" MaxTotalBytes="25GB" MaxSampleCount="200000">
+    <samples MaxPerSampleBytes="1GB" MaxTotalBytes="25GB" MaxSampleCount="200000">
         <sample name="evtx">
             <ntfs_find name_match="*.evtx" header="ElfFile"/>
         </sample>
