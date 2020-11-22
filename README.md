@@ -1,5 +1,7 @@
 # DFIR ORC Configuration
 
+New version the memory could just be used with x64 arch.
+
 This configuration include memory dump with _winpmem.exe_
 and GetMemFiles (pagefile,swapfile,hiberfil).
 
@@ -75,16 +77,22 @@ DFIR-Orc.exe /keys
 
 You can add or del commands or archives with `+key=` or `-key=`.
 
+_Get SWAP Files is optional now_
 For example you can just do memory with this command :
 
 ```
-DFIR-Orc.exe /-key=Main
+# Just winpmem for x64 arch
+DFIR-Orc.exe /key=Memory
+
+# Just Swapfiles
+DFIR-Orc.exe /key=GetMemFiles
 ```
 
 Or just the main part with :
 
 ```
-DFIR-Orc.exe /-key=Memory
+# Just the Main
+DFIR-Orc.exe /key=Main
 ```
 
 You can add NTFSInfoHashPE and FatInfoHashPE with this command :
