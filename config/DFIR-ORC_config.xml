@@ -18,8 +18,8 @@
 			<output name="Memory_{FullComputerName}_{TimeStamp}.raw" source="StdOut"/>
 			<output name="Winpmem.log" source="StdErr"/>
 		</command>
-
-		<command keyword="GetMemFiles">
+		<!-- GetMemFiles commant to get SWAP Files - Optional -->
+		<command keyword="GetMemFiles" optional="yes">
 			<execute name="DFIR-Orc.exe" run="self:#GetThis"/>
 			<argument>/config=res:#GetMemFiles_config.xml</argument>
 			<output name="GetMemFiles.7z" source="File" argument="/out={FileName}"/>
