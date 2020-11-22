@@ -14,7 +14,7 @@
 		<!--GetMemory command to use "winpmem.exe output -" stream to StdOut -->
 		<command keyword="GetMemory">
 			<execute name="winpmem.exe" run="7z:#Tools|winpmem.exe"/>
-			<argument>--format raw --output -</argument>
+			<argument>-d -</argument>
 			<output name="Memory_{FullComputerName}_{TimeStamp}.raw" source="StdOut"/>
 			<output name="Winpmem.log" source="StdErr"/>
 		</command>
