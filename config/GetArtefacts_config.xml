@@ -5,9 +5,9 @@
     <samples MaxTotalBytes="1GB" MaxSampleCount="200000" MaxPerSampleBytes="1GB">
         <sample name="Inf" MaxPerSampleBytes="1MB">
           <ntfs_find name_match="*.inf"/>
-          <ntfs_exclude path_match="\Windows\*"/>
-          <ntfs_exclude path_match="*\Program Files\*"/>
-          <ntfs_exclude path_match="*\Program Files (x86)\*"/>
+          <ntfs_exclude path_match="\Windows\*.inf"/>
+          <ntfs_exclude path_match="*\Program Files\*.inf"/>
+          <ntfs_exclude path_match="*\Program Files (x86)\*.inf"/>
         </sample>
         <sample name="Prefetch" MaxPerSampleBytes="20MB">
             <ntfs_find path_match="*\Prefetch\*.pf"/>
