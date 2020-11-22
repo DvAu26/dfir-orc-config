@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <ntfsinfo walker="MFT" resurrect="yes">
-    <location altitude="highest">%SystemDrive%</location>
+    <location altitude="highest">*</location>
     <columns>
         <default>ComputerName,VolumeID,Default,ExtendedAttribute,RecordInUse,SecDescrID,ADS,FirstBytes</default>
         <default>Details</default>
