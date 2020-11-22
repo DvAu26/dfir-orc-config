@@ -68,7 +68,7 @@
           <ntfs_find path_match="*\AppData\Local\Packages\Microsoft*\LocalState\*.bin" /> <!-- BIN files for OneNote-->
           <ntfs_find path_match="*\AppData\Local\Packages\Microsoft*\LocalState\*.ttl" /> <!-- XML Files for Maps-->
         </sample>
-        <!-- CIM repository -->
+        <!-- CIM repository and WMI repository -->
         <sample name="Cim_Wmi">
           <ntfs_find path_match="*\WBEM\Repository\*.data" /> <!-- Objects.data mapping -->
           <ntfs_find path_match="*\WBEM\Repository\*.map" /> <!-- Mapping(1,2,3).map mapping -->
@@ -77,7 +77,7 @@
         </sample>
         <!-- Win10 timeline activities database  ActivitiesCache.db files -->
         <sample name="W10ActivitiesCache" MaxPerSampleBytes="100MB">
-            <ntfs_find path_match="*\AppData\Local\ConnectedDevicesPlatform\ActivitiesCache.*"/>
+            <ntfs_find path_match="*\AppData\Local\ConnectedDevicesPlatform\*\ActivitiesCache.*"/>
         </sample>
         <!-- System Resource Usage Monitor SRUDB.dat -->
         <sample name="Sru" MaxPerSampleBytes="100MB">
