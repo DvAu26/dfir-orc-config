@@ -53,7 +53,7 @@
         </sample>
 
         <sample name="W10ActivitiesCache" MaxPerSampleBytes="100MB">
-            <ntfs_find path_match="\AppData\Local\ConnectedDevices Platform\L.*\ActivitiesCache.*"/>
+            <ntfs_find path_match="\AppData\Local\ConnectedDevicesPlatform\*\ActivitiesCache.*"/>
         </sample>
 
         <sample name="AmCache" MaxPerSampleBytes="120MB">
