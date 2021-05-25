@@ -27,5 +27,13 @@
           <ntfs_find name_match="setupapi*.log" />
           <ntfs_find path_match="*\windows\debug\mrt.log" />
         </sample>
+        <sample name="Exch_logs">
+          <ntfs_find path_match="Microsoft\Exchange Server\*\Logging\*" />
+          <ntfs_find path_match="Exchange\Logging\*" />
+          <ntfs_find path_match="ExchangeSetupLogs\*"
+        </sample>
+        <sample name="IIS_logs">
+          <ntfs_find path_match="inetpub\logs\*" />
+        </sample>
     </samples>
 </getthis>
