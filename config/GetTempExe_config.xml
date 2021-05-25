@@ -9,5 +9,10 @@
       <ntfs_find path_match="\Users\*\AppData\Local\Temp\*" header="MZ"/>
       <ntfs_find path_match="\RECYCLER\*" header="MZ"/>
     </sample>
+    <!-- Samples exe in the Windows/Help/ directory!-->
+    <sample name="Help_Exe">
+      <ntfs_exclude patch_match="*\WorkingTemp\*"/>
+      <ntfs_find path_match="Windows\Help\*" header="MZ"/>
+    </sample>
   </samples>
 </getthis>
