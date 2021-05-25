@@ -24,11 +24,15 @@
         <ntfs_find name_match="*.py" />
     </sample>
     <sample name="wmi">
-        <ntfs_find name-math="*.mof" />
+        <ntfs_find name_math="*.mof" />
     </sample>
     <sample name="jar">
       <ntfs_find path_match="\Users\*.jar" />
       <ntfs_find path_match="\Document and settings\*.jar" />
+    </sample>
+    <sample name="aspx">
+      <ntfs_find name_match="*.aspx" />
+      <ntfs_find name_math="*.asp" />
     </sample>
   </samples>
 </getthis>
