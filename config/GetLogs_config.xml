@@ -9,7 +9,7 @@
         <sample name="CCM_logs">
             <ntfs_find path_match="\Windows\ccm\logs\*" />
             <ntfs_find path_match="\Windows\syswow64\ccm\logs\*" />
-            <ntfs_find path_match="\Windows\\system32\ccm\logs\*" />
+            <ntfs_find path_match="\Windows\system32\ccm\logs\*" />
         </sample>
         <sample name="PowerShellHistory">
             <ntfs_find path_match="\Users\*\Appdata\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt" />
@@ -28,12 +28,12 @@
           <ntfs_find path_match="*\windows\debug\mrt.log" />
         </sample>
         <sample name="Exch_logs">
-          <ntfs_find path_match="Microsoft\Exchange Server\*\Logging\*" />
-          <ntfs_find path_match="Exchange\Logging\*" />
-          <ntfs_find path_match="ExchangeSetupLogs\*"
+          <ntfs_find path_match="*\Microsoft\Exchange Server\*\Logging\*" />
+          <ntfs_find path_match="*\Exchange\Logging\*" />
+          <ntfs_find path_match="*\ExchangeSetupLogs\*" />
         </sample>
         <sample name="IIS_logs">
-          <ntfs_find path_match="inetpub\logs\*" />
+          <ntfs_find path_match="*\inetpub\logs\*" />
         </sample>
     </samples>
 </getthis>
